@@ -1221,7 +1221,8 @@ def google_pred():
     set_with_dataframe(worksheet, your_dataframe)
     get_excel()
     return day
-
+# Add the while loop
+istime = False
 ################################################################################
 # Run the loop to trigger at certain type
 ################################################################################
