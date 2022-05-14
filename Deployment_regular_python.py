@@ -1221,7 +1221,19 @@ def google_pred():
     set_with_dataframe(worksheet, your_dataframe)
     get_excel()
     return day
-
+# Add the while loop
+istime = False
+################################################################################
+# Run the loop to trigger at certain type
+################################################################################
+while istime == False:
+    k = str(datetime.datetime.now())
+    k = k.split(" ")
+    dateNow = k[1].split(".")
+    dateNow = dateNow[0][0:-3]
+    
+    if dateNow == "06:00":
+        istime= True
         
 while True:
     d = google_pred()
