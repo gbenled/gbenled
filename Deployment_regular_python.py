@@ -1226,7 +1226,15 @@ istime = False
 ################################################################################
 # Run the loop to trigger at certain type
 ################################################################################
+while istime == False:
+    k = str(datetime.datetime.now())
+    k = k.split(" ")
+    dateNow = k[1].split(".")
+    dateNow = dateNow[0][0:-3]
     
+    if dateNow == "06:00":
+        istime= True
+        
 while True:
     d = google_pred()
     time.sleep(d*24*60*60)
